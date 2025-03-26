@@ -1,3 +1,6 @@
+using MelodyFlowAPI.Models;
+using System.Text.Json;
+
 // Using HTTP API to get the songs
 using (HttpClient client = new HttpClient())
 {
@@ -5,7 +8,8 @@ using (HttpClient client = new HttpClient())
     try
     {
         string response = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
-        Console.WriteLine(response);
+        var songs = JsonSerializer.Deserialize<List<Song>>(response)!;
+        songs[1998].DisplaySongDetails();
     }
     // If it doen't succeed, displays the error
     catch (Exception error) 
