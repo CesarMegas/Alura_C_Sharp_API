@@ -5,19 +5,19 @@ namespace Atividade02.Modelos;
 internal class Pais
 {
     [JsonPropertyName("nome")]
-    public string Nome { get; set; }
+    public string? Nome { get; set; }
 
     [JsonPropertyName("capital")]
-    public string Capital { get; set; }
+    public string? Capital { get; set; }
 
     [JsonPropertyName("populacao")]
     public int Populacao { get; set; }
 
     [JsonPropertyName("continente")]
-    public string Continente { get; set; }
+    public string? Continente { get; set; }
 
     [JsonPropertyName("idioma")]
-    public string Idioma { get; set; }
+    public string? Idioma { get; set; }
 
     public void ExibirDetalhesDoPais()
     {
