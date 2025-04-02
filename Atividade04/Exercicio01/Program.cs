@@ -1,4 +1,5 @@
 using Atividade04.Modelos;
+using System.Text.Json;
 
 GerarPessoa pessoa = new GerarPessoa();
 Console.Write("Digite o Nome da Pessoa: ");
