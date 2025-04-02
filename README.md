@@ -1,2 +1,2 @@
-# Alura_C_Sharp_API Parte 03: LINQ
-A terceira parte dessa sequência de aulas foca na utilização de LINQs, para manipular as informações obtidas nos arquivos Json de origem, focando em partes específicas deles.
+# Alura_C_Sharp_API Parte 04: Criando Arquivos com C#
+A quarta parte dessa sequência de aulas foca na criação de arquivos utilizando C#, por meio da criação de métodos que possibilitam a criação de um arquivo .TXT e de um arquivo .Json.
