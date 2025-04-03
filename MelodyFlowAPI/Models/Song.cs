@@ -4,6 +4,8 @@ namespace MelodyFlowAPI.Models;
 
 internal class Song
 {
+    private string[] keys = { "C", "C#", "D", "Eb", "E", "F", "F#", "G", "Ab", "A", "Bb", "B" };
+
     [JsonPropertyName("artist")]
     public string? Artist { get; set; }
 
@@ -30,6 +32,19 @@ internal class Song
     [JsonPropertyName("genre")]
     public string? Genre { get; set; }
 
+    [JsonPropertyName("key")]
+    public int Key { get; set; }
+
+    public string Tone 
+    {
+        get
+        {
+            return keys[Key];
+        }
+    }
+
+
+
     public void DisplaySongDetails()
     {
         Console.WriteLine($"Artist: {Artist}");
@@ -39,5 +54,6 @@ internal class Song
         Console.WriteLine($"Contains Explicit Content: {explicitContent}");
         Console.WriteLine($"Published in: {YearString}");
         Console.WriteLine($"Genre: {Genre}");
+        Console.WriteLine($"Key of the Song: {Tone}");
     }
 }
