@@ -47,4 +47,17 @@ internal class LinqFilter
             Console.WriteLine($"- {song}");
         }
     }
+
+    public static void FilterSongsByKey(List<Song> songList, string key)
+    {
+        var songsByKey = songList.Where(song => song.Tone.Equals(key))
+            .OrderBy(songs => songs.Name)
+            .Select(songs => songs.Name)
+            .ToList();
+        Console.WriteLine($"Songs in {key}");
+        foreach ( var song in songsByKey)
+        {
+            Console.WriteLine($"- {song}");
+        }
+    }
 }
